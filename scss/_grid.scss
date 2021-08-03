@@ -1,0 +1,30 @@
+$display: grid;
+$width: auto;
+$pad: 10px;
+$borde: 4px;
+$izquierda: left;
+$espacio: 50px;
+$top: 20px;
+$bottom: 100px;
+$columnas: repeat(2, 1fr);
+$rows: repeat(2, 50px);
+$blanco: white;
+
+.grid2{
+    display: $display;
+    width: $width;
+    padding: $pad;
+    border-radius: $borde;
+    text-align: $izquierda;
+    gap: $espacio;
+    margin: $width;
+    margin-top: $top;
+    margin-bottom: $bottom;
+    grid-template-columns: $columnas;
+    grid-auto-rows: $rows;
+    color:w$blanco
+}
+
+.grid3{
+    @extend .grid2;
+}

@@ -1,0 +1,149 @@
+* {box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+	header nav{color: none;
+	}
+	header a {color: white;
+	}
+	/* etiqueta */
+	html{height: 100%;
+	}
+	body{font-family: 'Hind Siliguri', sans-serif;
+	font-size: 100%;
+	min-height: 100%;
+	}
+	h1{color: white;
+		font-size: 30px;
+		text-align: center;
+	}
+	a{text-decoration: none;
+	}
+	/* class */
+	.boton-hamburguesa{
+		box-sizing: border-box;
+		display: inline-block;
+		border: 1px solid black;
+		border-radius: 5px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-weight: bold;
+		text-align: center;
+		user-select: none;
+	}
+	.li{
+		display: inline-block;
+		position: relative;
+	}
+	.h1{color: white;
+	}
+	.animate__animated.animate__bounceInUp{
+		color: white;
+		font-size: 30px;
+		text-align: center;
+	}
+	.background{ 
+			 width: -auto;
+			 height: 500px;
+			 overflow:-moz-hidden-unscrollable;
+	}
+	.background2, .background3, .background4{
+		width: -100px;
+		height: 500px;
+		font-style:normal;
+	}
+	.background2{ 
+		background-image: linear-gradient(to bottom, grey, black);
+	}
+	.background3{ 
+		background-image: url("../assets/img/background 2.jpg");
+	}
+	.background4{ 
+		background-image: linear-gradient(to bottom, black, grey);
+		overflow: hidden;
+	}
+	.oferta__contenido, .article{font-style: normal;
+	}
+	.oferta{font-size: 30px;
+	}
+	.grid2, .grid3{
+		display: grid;
+		width: auto;
+		padding: 10px;
+		border-radius: 4px;
+		text-align: left;
+		gap: 50px;
+		margin: auto;
+		margin-top: 20px;
+		margin-bottom: 100px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: repeat(2,50px);
+		color:white;
+	}
+	.oferta__contenido{
+			 color: white;
+			 text-decoration: none;
+			 font-size: 2vh;
+			 list-style-type: none;
+	}
+    .article-3{margin-top: 140px;
+			 color: white;
+			 font-size: 30px;
+			 text-align: center;
+			 overflow: hidden;
+	}
+	.modal.fade{color: black;}
+	.footer__a, .footer, .footer1, .footer1__a{text-align: center;
+							                   font-size: 10mm;
+	}
+	.footer1, .footer1__a{color: white;
+	}
+	.footer, .footer__a{color: black;
+	}
+	.card-deck{margin-top: 50px;
+		       margin-left: auto;
+			   margin-right: auto;
+	}
+	.btn.btn-outline-success{color: white;
+	}
+	.card{background: none;}
+	.card-body{color:black}
+	.btn.btn-link.btn-block.text-left.collapsed{color: white}
+	@media only screen and (min-width: 320px){ /* medida celular */
+	.background{background-image: linear-gradient(to bottom, grey, white);}
+	.background2{color: grey;}
+	.footer1, .footer1__a{color: white;
+					      font-size: 6mm;}
+	}
+	@media only screen and (min-width: 768px) and (max-width: 1366px){ /* medida tablet */
+	.background{background-image: linear-gradient(to bottom, black, white);}
+	.background2{color: grey;}
+	}
+	@media only screen and (min-width: 1024px){ /* medida desktop */
+	.background{background-image: linear-gradient(to bottom, grey,white);}
+	.background2{color: black;}
+	}
+	/* ID*/
+	#caja{
+			 width: 90%;
+			 max-width: 1030px;
+			 font-size: 20px;
+			 position:static;
+			 margin: auto, auto, auto, auto;
+			 list-style: none;
+			 padding: 0;
+			 display: flex;
+			 flex-direction: row;
+			 flex-wrap: nowrap;
+			 justify-content: flex-start;
+			 float: left;
+			 align-items: baseline;
+			 word-spacing: 10px;}
+	#caja li a{
+			 display: block;
+			 padding: auto;}
+	#caja li{
+			 display: inline-block;
+			 text-align: left;}
+	#caja li a:hover{background-color: rgb(82, 73, 73);}

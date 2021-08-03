@@ -1,0 +1,9 @@
+$family: 'Hind Siliguri', sans-serif;
+$size: 100%;
+$min: 100%;
+
+body{font-style:$family;
+font-size: $size;
+min-height: $min;}
+
+@import "grid";
