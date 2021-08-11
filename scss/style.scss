@@ -1,79 +1,15 @@
 $family: 'Hind Siliguri', sans-serif;
 $size: 100%;
 $min: 100%;
-$widht: -100px;
-$negro: black;
-$gris: grey;
-$nada: none;
-$fonts: 30px;
-$fstyle: normal;
-$fontb: 150%;
-$height: 500px;
-$overflow: -moz-hidden-unscrollable;
-$center: center;
-$auto: auto;
-$mtop: 50px;
-$vh: 2vh;
 
-header nav{color: $nada;
-}
-header a {color: $negro;
-}
 html{height: $min;
 }
 body{font-style: $family;
 font-size: $size;
-min-height: $min;}
-a{text-decoration: $nada;
+min-height: $min;
 }
 @import "grid";
-.link{color: $gris;
-}
-.h1{color: $negro;
-}
-.animate__animated.animate__bounceInUp{
-    color: $negro;
-    font-size: $fonts;
-    text-align: $center;
-}
-.background{ 
-         width: $auto;
-         height: $height;
-         overflow: $overflow;
-}
-.background2{
-    width: $widht;
-    height: $height;
-    font-style: $fstyle;
-}
-.oferta__contenido, .article{font-style: $fstyle;
-}
-.oferta{font-size: $fonts;
-    color: $negro;
-}
-.oferta__contenido{
-    color: $negro;
-    text-decoration: $nada;
-    font-size: $vh;
-    list-style-type: $nada;
-}
-.formulario{
-text-align: center;
-}
-.modal.fade{color: $negro;
-}
-.card-deck{margin-top: $mtop;
-      margin-left: $auto;
-      margin-right: $auto;
-}
-.btn.btn-outline-success{color: $negro;
-}
-.nav-link{color: $negro;
-          font-size: $fontb;
-}
-.card{background: $nada;
-}
-.card-body{color:$negro;
-}
-.btn.btn-link.btn-block.text-left.collapsed{color: $negro;
-}
+@import "header";
+@import "background";
+@import "oferta";
+@import "bootstrap";

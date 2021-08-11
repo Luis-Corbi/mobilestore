@@ -1,0 +1,25 @@
+$negro: black;
+$gris: grey;
+$nada: none;
+$fonts: 30px;
+$center: center;
+$fontb: 150%;
+
+header nav{color: $nada;
+}
+header a {color: $negro;
+}
+a{text-decoration: $nada;
+}
+.link{color: $gris;
+}
+.h1{color: $negro;
+}
+.animate__animated.animate__bounceInUp{
+    color: $negro;
+    font-size: $fonts;
+    text-align: $center;
+}
+.nav-link{color: $negro;
+    font-size: $fontb;
+}

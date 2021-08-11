@@ -1,0 +1,16 @@
+$widht: -100px;
+$fstyle: normal;
+$height: 500px;
+$overflow: -moz-hidden-unscrollable;
+$auto: auto;
+
+.background{ 
+    width: $auto;
+    height: $height;
+    overflow: $overflow;
+}
+.background2{
+width: $widht;
+height: $height;
+font-style: $fstyle;
+}

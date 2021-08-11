@@ -8,7 +8,7 @@ $top: 20px;
 $bottom: 100px;
 $columnas: repeat(2, 1fr);
 $rows: repeat(2, 50px);
-$blanco: white;
+$negro: black;
 
 .grid2{
     display: $display;
@@ -22,7 +22,7 @@ $blanco: white;
     margin-bottom: $bottom;
     grid-template-columns: $columnas;
     grid-auto-rows: $rows;
-    color:w$blanco
+    color: $negro
 }
 
 .grid3{

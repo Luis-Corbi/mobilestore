@@ -1,0 +1,17 @@
+$negro: black;
+$nada: none;
+$fonts: 30px;
+$fstyle: normal;
+$vh: 2vh;
+
+.oferta__contenido, .article{font-style: $fstyle;
+}
+.oferta{font-size: $fonts;
+    color: $negro;
+}
+.oferta__contenido{
+    color: $negro;
+    text-decoration: $nada;
+    font-size: $vh;
+    list-style-type: $nada;
+}

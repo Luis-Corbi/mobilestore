@@ -1,0 +1,26 @@
+$negro: black;
+$nada: none;
+$fontb: 150%;
+$auto: auto;
+$mtop: 50px;
+
+.formulario{
+    text-align: center;
+    }
+.modal.fade{color: $negro;
+}
+ .card-deck{margin-top: $mtop;
+          margin-left: $auto;
+          margin-right: $auto;
+}
+.btn.btn-outline-success{color: $negro;
+}
+.nav-link{color: $negro;
+          font-size: $fontb;
+}
+.card{background: $nada;
+}
+.card-body{color: $negro;
+}
+.btn.btn-link.btn-block.text-left.collapsed{color: $negro;
+}
