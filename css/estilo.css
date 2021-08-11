@@ -38,18 +38,14 @@
 		text-align: center;
 	}
 	.background{ 
-			 width: -auto;
+			 width: auto;
 			 height: 500px;
-			 overflow:-moz-hidden-unscrollable;
+			 overflow: -moz-hidden-unscrollable;
 	}
 	.background2{
 		width: -100px;
 		height: 500px;
-		font-style:normal;
-	}
-	.background4{ 
-		background-color: grey;
-		overflow: hidden;
+		font-style: normal;
 	}
 	.oferta__contenido, .article{font-style: normal;
 	}
@@ -76,12 +72,10 @@
 			 font-size: 2vh;
 			 list-style-type: none;
 	}
-	.formulario{
+    .formulario{
 		text-align: center;
 	}
-	.modal.fade{color: black;}
-	.footer__a, .footer, .footer1, .footer1__a{text-align: center;
-							                   font-size: 10mm;
+	.modal.fade{color: black;
 	}
 	.card-deck{margin-top: 50px;
 		       margin-left: auto;
@@ -90,7 +84,7 @@
 	.btn.btn-outline-success{color: black;
 	}
 	.nav-link{color: black;
-	font-size: 150%;
+	          font-size: 150%;
 	}
 	.card{background: none;
 	}
