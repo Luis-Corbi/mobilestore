@@ -112,7 +112,7 @@ ss* {box-sizing: border-box;
 	
 	#registration-form .image{
 		float:left;
-		background-image: url("desk.jpg");
+		background-image: url("img.jpg");
 		height: 500px;
 		width: 50%;
 		background-size: cover;
