@@ -25,6 +25,6 @@ $negro: black;
     color: $negro
 }
 
-.grid3{
+.grid3, .grid4{
     @extend .grid2;
 }
