@@ -77,7 +77,8 @@ ss* {box-sizing: border-box;
 	}
 	@media only screen and (min-width: 320px){ /* medida celular */
 	.background{background-color: white;}
-	.grid2, .grid3{
+	.grid2, .grid3{display: none;}
+	.grid4{
 		width: auto;
 		padding: 10px;
 		border-radius: 4px;
@@ -107,7 +108,8 @@ ss* {box-sizing: border-box;
     }
 	@media only screen and (min-width: 768px) and (max-width: 1366px){ /* medida tablet */
 	.background{background-color: white;}
-	.grid2, .grid3{
+	.grid2, .grid3{display: none;}
+	.grid4{
 		display: inline-grid;
 		width: auto;
 		padding: 10px;
@@ -150,6 +152,7 @@ ss* {box-sizing: border-box;
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-rows: repeat(2,50px);
 		color: white;}
+	.grid4{display: none;}
 	.navbar-fixed-top{display: none ;}
 	.navbar.navbar-expand-lg.navbar-black{display: flex;
 		position:sticky;
@@ -231,9 +234,8 @@ ss* {box-sizing: border-box;
 	}
 /* footer */
 	.footer-dark {
-		padding:50px 0;
+		padding: 90px 0;
 		color: black;
-		border-top: black;
 	  }
 	  
 	  .footer-dark h3 {
