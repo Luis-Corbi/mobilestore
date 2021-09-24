@@ -11,7 +11,7 @@ else if ((nombreIngresado != "") && (apellidoIngresado != "")){
      console.log("Hola " + nombreIngresado + " " + apellidoIngresado);
      break;
 }
-
+}
 // cuentas
 let numero1 = parseInt(prompt("Ingrese un número"));
 let numero2 = parseInt(prompt("Ingrese un segundo número"));
