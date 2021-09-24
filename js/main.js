@@ -19,7 +19,7 @@ let operador = prompt("selecciona un operador");
 resultado = calculadora(numero1, numero2, operador);
 alert(calculadora(numero1, numero2, operador));
 mostrar(resultado);
-}
+
 const mostrar = (mensaje) => {
     console.log(mensaje);
 }
