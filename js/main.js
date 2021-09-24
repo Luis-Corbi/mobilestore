@@ -15,9 +15,9 @@ else if ((nombreIngresado != "") && (apellidoIngresado != "")){
 // cuentas
 let numero1 = parseInt(prompt("Ingrese un número"));
 let numero2 = parseInt(prompt("Ingrese un segundo número"));
-let operador = prompt("selecciona un operador");
-resultado = calculadora(numero1, numero2, operador);
-alert(calculadora(numero1, numero2, operador));
+let operacion = prompt("selecciona un operacion");
+resultado = calculadora(numero1, numero2, operacion);
+alert(calculadora(numero1, numero2, operacion));
 mostrar(resultado);
 
 const mostrar = (mensaje) => {
@@ -46,4 +46,3 @@ function calculadora(numero1, numero2, operacion) {
             break;
     }
 }
-console.log(calculadora(10, 5, "*"));
