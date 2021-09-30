@@ -1,5 +1,5 @@
 // datos del usuario
-function saludar(){
+function saludar() {
 const cantidad_intentos = 3; // cambio para la clase 3
 for (let j = 1; j <= cantidad_intentos; j++) {
 let nombreIngresado = prompt("Ingrese su nombre");
@@ -16,9 +16,9 @@ else if ((nombreIngresado != "") && (apellidoIngresado != "")){
 }
 // cuentas
 function solicitarinformacion() {
-let numero1 = parseInt(prompt("Ingrese un número"));
-let numero2 = parseInt(prompt("Ingrese un segundo número"));
-let operacion = prompt("selecciona un operacion");
+let numero1 = parseInt(prompt("Ingrese el precio de un juego"));
+let numero2 = parseInt(prompt("Ingrese el precio de un segundo juego"));
+let operacion = prompt("selecciona una operaciósn");
 let resultado = `El resultado es ${calculadora(numero1, numero2, operacion)}`;
 alert(`El resultado es ${calculadora(numero1, numero2, operacion)}`);
 mostrar(resultado);
@@ -32,27 +32,19 @@ const resta = (a, b) => a - b;
 let resultado = 0;
 function calculadora(numero1, numero2, operacion) {
     switch (operacion) {
-        case "Suma":
-        case "SUMA":
-        case "suma":
+        case "SUMA".toLowerCase() :
         case "+":
             return numero1 + numero2;
             break;
-        case "Resta":
-        case "RESTA":
-        case "resta":
+        case "RESTA".toLowerCase() :
         case "-":
             return numero1 - numero2;
             break;
-        case "Multiplicacion":
-        case "MULTIPLICACION":
-        case "multiplicacion":
+        case "MULTIPLICACION".toLowerCase() :
         case "*":
             return numero1 * numero2;
             break;
-        case "Division":
-        case "DIVISION":
-        case "division":
+        case "DIVISION".toLowerCase() :
         case "/":
             if(numero2 === 0){
                 return(alert(`no se puede dividir por 0`))
@@ -78,13 +70,20 @@ class Producto {
         this.vendido = true;
     }
 }
-const producto1 = new Producto("Resident Evil Village", "60");
-const producto2 = new Producto("Battlefield 2042", "65");
-const producto3 = new Producto("Horizon Zero Dawn", "40");
-const producto4 = new Producto("Detroit: Become Human", "40");
-producto1.sumaIva();
-producto2.sumaIva();
-producto1.vender();
+
+const productos = [];
+productos.push(new Producto("Resident Evil Village", "60"));
+productos.push(new Producto("Battlefield 2042", "65"));
+productos.push(new Producto("Horizon Zero Dawn", "40"));
+productos.push(new Producto("Detroit: Become Human", "40"));
+productos.push(new Producto("Days Gone", "60"));
+productos.push(new Producto("New World", "24"));
+productos.push(new Producto("Sea of Thieves", "15"));
+
+for (const producto of productos) {
+    producto.sumaIva();
+}
+console.log(productos);
 
 saludar();
 solicitarinformacion();
