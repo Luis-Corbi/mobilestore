@@ -54,6 +54,7 @@ ss* {box-sizing: border-box;
 	.oferta__contenido{
 			 color: black;
 			 text-decoration: none;
+			 text-align: left;
 			 font-size: 2vh;
 			 list-style-type: none;
 	}

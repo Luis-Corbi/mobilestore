@@ -3,9 +3,9 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <meta name="keywords" content="juegos, videojuegos, fifa, fortnite, new world">
-    <meta name="description" content="tienda online de videojuegos con los mejores precios del mercado">
-    <title>gamestore</title>
+    <meta name="keywords" content="celulares, notebooks, Iphone, Samsung, Apple, Gigabyte, Asus">
+    <meta name="description" content="tienda online de celulares y notebooks con los mejores precios del mercado">
+    <title>Mobilestore</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 </head>
 <body class="background">
     <header> <!-- header de la pagina -->
-        <h1 class="animate__animated animate__bounceInUp">Juegos destacados del día</h1>
+        <h1 class="animate__animated animate__bounceInUp">Productos destacados del día</h1>
         <!-- navbar mobile y tablet -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <label class="boton-hamburguesa" for="menu"> ☰ </label>
               </button>
-              <a class="navbar-brand" href="index.html">Gamestore</a>
+              <a class="navbar-brand" href="index.html">Mobilestore</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-left">
@@ -36,9 +36,9 @@
                 <li><a class="nav-link" href="./views/preguntas_frecuentes.html">Preguntas frecuentes</a></li>
                 <li><a class="nav-link" href="./views/registrarse.html">Registrarse</a></li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <form class="d-flex" id="productos1">
+                <input class="form-control mr-2" type="text" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" id="enviar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg></button>
               </form>
@@ -47,7 +47,7 @@
         </nav>
        <!-- navbar desktop -->
         <nav class="navbar navbar-expand-lg navbar-black"> 
-            <strong><a class="navbar-brand" href="index.html">Gamestore</a></strong>
+            <strong><a class="navbar-brand" href="index.html">Mobilestore</a></strong>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               <label class="boton-hamburguesa" for="menu"> ☰ </label>
@@ -70,9 +70,9 @@
                     <a class="nav-link" href="./views/registrarse.html">Registrarse</a>
                   </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <form class="d-flex" id="productos1">
+                <input class="form-control mr-2" type="text" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" id="enviar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg></button>
               </form>
@@ -85,38 +85,29 @@
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/img/resident evil.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/img/iphone.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Resident Evil Village</h5>
-              <p>Vive el survival horror como nunca antes en la 8.ª entrega principal de la aclamada serie Resident Evil: Resident Evil Village. El terror más realista e inescapable, con gráficos hiperdetallados, intensa acción en 1.ª persona y una trama magistral.<br> Precio $60</p>
+              <h5>Iphone 13 Pro</h5>
+              <p>Nuestro sistema de dos cámaras más avanzado, un chip más rápido que la competencia y hasta 2.5 horas más de batería que el Iphone 12<br> Precio $USD 1099</p>
               <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/img/battleflield.jpg" class="d-block w-100" alt="...">
+            <img src="https://cdn.andro4all.com/files/2021/03/xiaomi-mi-11-ultra-camaras.jpeg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Battlefield 2042</h5>
-              <p>Battlefield 2042 es un shooter en primera persona que marca el regreso a la emblemática guerra total de la franquicia. En un mundo en el futuro cercano transformado por el desorden, adáptate y sobrevive con la ayuda de tu patrulla y un arsenal de vanguardia en campos de batalla en constante cambio.<br> Precio $65</p>
+              <h5>Xiaomi Mi 11 Ultra</h5>
+              <p>Precio $USD 920</p>
               <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/img/horizon.jpg" class="d-block w-100" alt="...">
+            <img src="https://mireal.me/wp-content/uploads/2021/08/samsung_galaxy_z_fold_3_image_1628688597694.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Horizon Zero Dawn</h5>
-              <p>Vive la misión legendaria de Aloy para desvelar los secretos de una futura Tierra dominada por máquinas. ¡Usa devastadores ataques contra tus depredadores y explora un majestuoso mundo abierto en este galardonado RPG de acción!<br> Precio $40</p>
-              <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/detroit.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Detroit: Become Human</h5>
-              <p>Detroit: Become Human pone el destino de la humanidad y los androides en tus manos. Cada decisión que tomes afectará al resultado del juego, en una de las tramas narrativas con ramificaciones más intrincadas que jamás se ha visto.<br> Precio $40</p>
+              <h5>Samsung Galaxy Z Fold 3</h5>
+              <p>Precio $USD 1549.99</p>
               <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
             </div>
           </div>
@@ -132,33 +123,8 @@
       </div>
 </div>
 
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="assets/img/days-gone.jpeg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Days Gone</h5>
-      <p class="card-text">Lucha y recorre un Estados Unidos pospandémico letal. Ponte en la piel de Deacon St. John, un errante cazarrecompensas que recorre la carretera rota luchando por su supervivencia mientras busca una razón para seguir viviendo en este juego de acción y aventura de mundo abierto.<br> Precio $60</p>
-      <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
-    </div>
-  </div>
+<div id="cardsproductos">
 
-  <div class="card">
-    <img class="card-img-top" src="assets/img/new-world.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">New World</h5>
-      <p class="card-text">Explora un emocionante MMO de mundo abierto repleto de peligros y oportunidades en el que forjarás un nuevo destino en la isla sobrenatural de Aetérnum.<br> Precio $24</p>
-      <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="assets/img/sea.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Sea of Thieves</h5>
-      <p class="card-text">Sea of Thieves ofrece la experiencia de piratas definitiva, desde la navegación y el combate hasta la exploración y elsaqueo: todo para disfrutar de la vida pirata y convertirte en leyenda.<br> Precio $15</p>
-      <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
-    </div>
-  </div>
 </div>
 <!-- Footer inicio -->
 <div class="footer-dark">
@@ -166,12 +132,12 @@
       <div class="container">
           <div class="row">
               <div class="col-sm-6 col-md-3 item">
-                  <h3>Juegos</h3>
+                  <h3>Productos</h3>
                   <ul>
-                      <li><a href="index.html">Resident Evil</a></li>
-                      <li><a href="index.html">Battlefield 2042</a></li>
-                      <li><a href="index.html">Horizon Zero Dawn</a></li>
-                      <li><a href="index.html">Detroit Become Human</a></li>
+                      <li><a href="index.html">Apple</a></li>
+                      <li><a href="index.html">Samsung</a></li>
+                      <li><a href="index.html">Gigabyte</a></li>
+                      <li><a href="index.html">Asus</a></li>
                   </ul>
               </div>
               <div class="col-sm-6 col-md-3 item">
@@ -185,12 +151,12 @@
                   </ul>
               </div>
               <div class="col-md-6 item text">
-                  <h3>Gamestore</h3>
-                  <p>somos una tienda online de videojuegos con los mejores precios del mercado.</p>
+                  <h3>Mobilestore</h3>
+                  <p>somos una tienda online de celulares y notebooks con los mejores precios del mercado.</p>
               </div>
               <div class="col item social"><a href="https://www.Facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.Twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://api.whatsapp.com/send?phone=+54 9 2314 447164" target="_blank"><i class="fab fa-whatsapp"></i></a><a href="https://www.Instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
           </div>
-          <p class="copyright">gamestore © 2021 Copyright: Powered by Luis Corbi</p>
+          <p class="copyright">Mobilestore © 2021 Copyright: Powered by Luis Corbi</p>
       </div>
   </footer>
 </div>
