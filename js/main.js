@@ -116,10 +116,6 @@ cardsproductos.setAttribute(
  `col-lg-10 offset-1 d-flex flex-wrap justify-content-start text-center`
 );
 
-let titulo = document.createElement("h1");
-titulo.setAttribute(`class`, `text-center mt-10`);
-body.prepend(titulo);
-
 function tarjetasHTML(productosAMostrar) {
     for (const modelo of productosAMostrar) {
         cardsproductos.innerHTML += `
@@ -128,16 +124,18 @@ function tarjetasHTML(productosAMostrar) {
                                       <div class="card-body">
                                           <h5 class="card-title"> ${modelo.modelo} </h5>
                                           <p class="card-text">Categoria: ${modelo.cat} <br> Marca: ${modelo.marca} <br> Color: ${modelo.color} <br> Precio: ${modelo.precio}</p>
-                                          <a class="btn btn-primary" href="index.html" role="button">Comprar</a>
+                                          <a class="btn btn-primary" id="btn${modelo.id}" role="button">Comprar</a>
                                       </div>
                                   </div>`;
 }
 estiloCards();
 }
-      
+
 function filtroCat() {
 removeAllChildNodes(cardsproductos);
 let modelosFiltrados;
+
+//si el usuario no ingresa nada en el input se muestran todos los resultados
 if (input.value === "") {
 modelosFiltrados = productos1;
 } else {
@@ -147,9 +145,7 @@ modelosFiltrados = productos1.filter(
 );
 console.log(modelosFiltrados);
 }
-titulo.setAttribute("style", "color:white");
-titulo.textContent = `modelos en ${input.value}`;
-tarjetasHTML();
+tarjetasHTML(modelosFiltrados);
 estiloCards();
 }
 
@@ -174,4 +170,8 @@ tarjetasHTML(productos1);
   
 let btnFiltrar = document.getElementById("enviar");
 btnFiltrar.addEventListener("click", filtroCat);
-    
+
+$(`#btn${modelo.id}`).on(`click`, function() {
+  console.log(`Compreaste ${modelo.modelo}`);
+  alert(`Compreaste ${modelo.modelo}`);
+});
