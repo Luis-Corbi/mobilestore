@@ -104,10 +104,10 @@ let productos1 = [
   ];
 
 const body = document.body;
-
 let input = document.getElementById(`inputValue`);
 
-
+let enviar = document.getElementById("enviar");
+enviar.addEventListener("click", filtroCat);
 
 // Div donde van las cards
 let cardsproductos = document.getElementById("cardsproductos");
@@ -132,24 +132,36 @@ function tarjetasHTML(productosAMostrar) {
                                       </div>
                                   </div>`;
 }
-
 estiloCards();
 }
       
 function filtroCat() {
+removeAllChildNodes(cardsproductos);
+let modelosFiltrados;
+if (input.value === "") {
+modelosFiltrados = productos1;
+} else {
+//filtrar productos con validaciones
+modelosFiltrados = productos1.filter(
+  (modelo) => modelo.cat.toLowerCase() === input.value.toLowerCase()
+);
+console.log(modelosFiltrados);
+}
+titulo.setAttribute("style", "color:white");
+titulo.textContent = `modelos en ${input.value}`;
 tarjetasHTML();
 estiloCards();
 }
 
 function estiloCards() {
-   let cards = document.getElementsByClassName(`card`);
-   for (const card of cards) {
+ let cards = document.getElementsByClassName(`card`);
+ for (const card of cards) {
     card.setAttribute(
       `style`,
       `width: 19.5rem; background-color: none; color: white; margin: 2rem`
      );
      }
-   }
+  }
     
 //Funcion para que no siga agregando cards en el elemento padre en cada busqueda
 function removeAllChildNodes(parent) {
@@ -158,8 +170,8 @@ function removeAllChildNodes(parent) {
     }
 }
   
-  tarjetasHTML(productos1);
+tarjetasHTML(productos1);
   
-  let btnFiltrar = document.getElementById("enviar");
-  btnFiltrar.addEventListener("click", filtroCat);
+let btnFiltrar = document.getElementById("enviar");
+btnFiltrar.addEventListener("click", filtroCat);
     
