@@ -100,8 +100,8 @@ let productos1 = [
       cat: "Notebooks",
       img: "https://http2.mlstatic.com/D_NQ_NP_788352-MLA45481349887_042021-O.webp",
       precio: "$USD 1399",
-    },
-  ];
+    }
+  ]
 
 const body = document.body;
 let input = document.getElementById(`inputValue`);
@@ -124,7 +124,7 @@ function tarjetasHTML(productosAMostrar) {
                                       <div class="card-body">
                                           <h5 class="card-title"> ${modelo.modelo} </h5>
                                           <p class="card-text">Categoria: ${modelo.cat} <br> Marca: ${modelo.marca} <br> Color: ${modelo.color} <br> Precio: ${modelo.precio}</p>
-                                          <a class="btn btn-primary" id="btn${modelo.id}" role="button">Comprar</a>
+                                          <div id="boton"><a class="btn btn-primary" id="btn${modelo.id}" role="button">Comprar</a></div>
                                       </div>
                                   </div>`;
 }
@@ -171,7 +171,22 @@ tarjetasHTML(productos1);
 let btnFiltrar = document.getElementById("enviar");
 btnFiltrar.addEventListener("click", filtroCat);
 
-$(`#btn${modelo.id}`).on(`click`, function() {
-  console.log(`Compreaste ${modelo.modelo}`);
-  alert(`Compreaste ${modelo.modelo}`);
+$( document ).ready(function() {
+  //Declaramos la url del API
+  const APIURL = 'https://jsonplaceholder.typicode.com/posts' ; 
+  //Declaramos la información a enviar
+  const infoPost =  { nombre: "Ana", profesion: "Programadora" }
+  //Agregamos un botón con jQuery
+  $("#boton").prepend('<button class="btn btn-primary">ENVIAR API</button>');
+  //Escuchamos el evento click del botón agregado
+  $(".btn btn-primary").click(() => { 
+      $.ajax({
+          method: "POST",
+          url:  APIURL,
+          data: infoPost,
+          success: function(respuesta){
+              $("#boton").prepend(`<div>${respuesta.nombre}</div>`);
+          }
+      });
+  });
 });
