@@ -1,6 +1,6 @@
 //VARIABLES
 //linkeo datos.json que contiene mi array de objetos
-const urlJSON = "./js/datos.json"
+const urlJSON = "../js/datos.json"
 
 //Selecciono donde voy a imprimir las cards
 const cards = document.getElementById('cards')
@@ -55,7 +55,7 @@ $.getJSON(urlJSON,function (respuesta, estado) {
                 <h5 class="card-title"> ${dato.modelo} </h5>
                 <p class="card-text card-marca">${dato.cat} ${dato.modelo}</p>
                 <p class="card-text"> ${dato.color}</p>
-                <p class="card-text card-price">Precio: ${dato.price}</p>
+                <p class="card-text card-price">Precio: ${dato.precio}</p>
                 <button href="#" id="${dato.id}" class="btn btn-dark add-cart" style="background-color:black; border-color:#171C3D">Agregar al carrito</a>
                 </div>
         </div>`
@@ -101,7 +101,7 @@ $.getJSON(urlJSON,function (respuesta, estado) {
           precio: objeto.querySelector("p.card-price").textContent,
           cantidad: 1
         }
-        if(carrito.hasOwnProperty(producto.id)){
+        if(carrito.hasOwnProperty(producto.id)) {
           producto.cantidad = carrito[producto.id].cantidad + 1
         }
         carrito[producto.id] = {...producto}
@@ -147,9 +147,9 @@ $.getJSON(urlJSON,function (respuesta, estado) {
         `
         return
       }
-      const nCantidad = Object.values(carrito).reduce((acc,{cantidad})=> acc + cantidad,0)
-      const nPrecio= Object.values(carrito).reduce((acc, {cantidad, precio}) =>  acc + cantidad * precio,0)
-      console.log(nPrecio);
+      const nCantidad = Object.values(carrito).reduce((acc,{cantidad})=> acc + cantidad, 0)
+      const nPrecio= Object.values(carrito).reduce((acc, {cantidad, precio}) =>  acc + cantidad * precio ,0)
+      //console.log(nPrecio);
 
       templateFooter.querySelectorAll('td')[0].textContent = nCantidad
       templateFooter.querySelector('span').textContent = nPrecio

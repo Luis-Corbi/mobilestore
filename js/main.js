@@ -170,23 +170,3 @@ tarjetasHTML(productos1);
   
 let btnFiltrar = document.getElementById("enviar");
 btnFiltrar.addEventListener("click", filtroCat);
-
-$( document ).ready(function() {
-  //Declaramos la url del API
-  const APIURL = 'https://jsonplaceholder.typicode.com/posts' ; 
-  //Declaramos la información a enviar
-  const infoPost =  { nombre: "Ana", profesion: "Programadora" }
-  //Agregamos un botón con jQuery
-  $("#boton").prepend('<button class="btn btn-primary">ENVIAR API</button>');
-  //Escuchamos el evento click del botón agregado
-  $(".btn btn-primary").click(() => { 
-      $.ajax({
-          method: "POST",
-          url:  APIURL,
-          data: infoPost,
-          success: function(respuesta){
-              $("#boton").prepend(`<div>${respuesta.nombre}</div>`);
-          }
-      });
-  });
-});
