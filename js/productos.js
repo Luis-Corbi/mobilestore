@@ -1,6 +1,113 @@
-//VARIABLES
-//linkeo datos.json que contiene mi array de objetos
-const urlJSON = "../js/datos.json"
+import searchFilters from "./filtro_busqueda";
+let productos = [{
+  id: 1,
+  marca: "Apple",
+  modelo: "Iphone 13 Pro",
+  color: "Silver",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_840175-MLA47779316482_102021-O.webp",
+  precio: 1399.99
+},
+{
+  id: 2,
+  marca: "Apple",
+  modelo: "Iphone 13 Pro",
+  color: "Gold",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_799292-MLA47779331165_102021-O.webp",
+  precio: 1399.99
+},
+{
+id: 3,
+marca: "Apple",
+modelo: "Iphone 12 Pro",
+color: "Silver",
+cat: "Celulares",
+img: "https://http2.mlstatic.com/D_NQ_NP_941019-MLA43975720782_112020-O.webp",
+precio: 999.99
+},
+{
+  id: 4,
+  marca: "Apple",
+  modelo: "Iphone 12 Pro",
+  color: "Green",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_824876-MLA43975720984_112020-O.webp",
+  precio: 999.99
+},
+{
+  id: 5,
+  marca: "Samsung",
+  modelo: "S21+ 5G",
+  color: "Phantom Black",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_976371-MLA45566612445_042021-O.webp",
+  precio: 849.99
+},
+{
+  id: 6,
+  marca: "Samsung",
+  modelo: "S21",
+  color: "Phantom White",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_748918-MLA44848256931_022021-O.webp",
+  precio: 749.99
+},
+{
+  id: 7,
+  marca: "Samsung",
+  modelo: "Galaxy Z Fold3 5G",
+  color: "Phantom Green",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_831253-MLA47891251953_102021-O.webp",
+  precio: 1549.99
+},
+{
+  id: 8,
+  marca: "Xiaomi",
+  modelo: "Mi 11 Ultra",
+  color: "Negro",
+  cat: "Celulares",
+  img: "https://http2.mlstatic.com/D_NQ_NP_751583-MLA46773535610_072021-O.webp",
+  precio: 920
+},
+{
+  id: 9,
+  marca: "Gigabyte",
+  modelo: "Aorus I7 11va 32gb Ssd Rtx3080 16gb 240hz",
+  color: "Negro",
+  cat: "Notebooks",
+  img: "https://http2.mlstatic.com/D_NQ_NP_853223-MLA46752326941_072021-O.webp",
+  precio: 1999.99
+},
+{
+  id: 10,
+  marca: "Gigabyte",
+  modelo: "Aero 17 I7 Rtx 3060p 16gb 1tb M.2",
+  color: "Negro",
+  cat: "Notebooks",
+  img: "https://http2.mlstatic.com/D_NQ_NP_946917-MLA45656496951_042021-O.webp",
+  precio: 2099.99
+},
+{
+  id: 11,
+  marca: "Asus",
+  modelo: "Rog Duo 15.6+14 Uhd I9 Ssd 2tb 32gb Rtx 2080",
+  color: "Negro",
+  cat: "Notebooks",
+  img: "https://http2.mlstatic.com/D_NQ_NP_716951-MLA47492162666_092021-O.webp",
+  precio: 3920
+},
+{
+  id: 12,
+  marca: "Asus",
+  modelo: "Tuf Dash Rtx 3060 I7 11th Gen 16gb 512gb Ssd 144hz Ips",
+  color: "Negro",
+  cat: "Notebooks",
+  img: "https://http2.mlstatic.com/D_NQ_NP_788352-MLA45481349887_042021-O.webp",
+  precio: 1399.99
+}
+]
 
 //Selecciono donde voy a imprimir las cards
 const cards = document.getElementById('cards')
@@ -42,30 +149,26 @@ items.addEventListener('click', e =>{
 })
 
 //FUNCIONES
-//parseo el json y hago un for of para imprimir las tarjetas
-$.getJSON(urlJSON,function (respuesta, estado) {
-    if (estado ==="success"){
+//hago un for of para imprimir las tarjetas
+function tarjetasHTML(respuesta) {
         let misdatos = respuesta
-        for(const dato of misdatos){
+        for(const modelo of misdatos){
             cards.innerHTML +=`
             <div class="col-lg-3 mb-3 col-md-6">
-            <div id="prenda" class="card">
-            <img src= ${dato.img} class="card-img-top">
+            <div id="productos" class="card">
+            <img src= ${modelo.img} class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title"> ${dato.modelo} </h5>
-                <p class="card-text card-marca">${dato.cat} ${dato.modelo}</p>
-                <p class="card-text"> ${dato.color}</p>
-                <p class="card-text card-price">Precio: ${dato.precio}</p>
-                <button href="#" id="${dato.id}" class="btn btn-dark add-cart" style="background-color:black; border-color:#171C3D">Agregar al carrito</a>
+                <h5 class="card-title"> ${modelo.modelo} </h5>
+                <p class="card-text card-marca">${modelo.cat}</p>
+                <p class="card-text"> ${modelo.color}</p>
+                <p class="card-text card-price">Precio: ${modelo.precio}</p>
+                <button href="#" id="${modelo.id}" class="btn btn-dark add-cart" style="background-color:black; border-color:#171C3D">Agregar al carrito</a>
                 </div>
         </div>`
         }
         estiloCards();
         console.log(misdatos)
     }
-    })
-  
-
     
 //funcion para darle estilo a las cards
     function estiloCards() {
@@ -192,3 +295,37 @@ $.getJSON(urlJSON,function (respuesta, estado) {
         e.stopPropagation
       }
       
+let input = document.getElementById(`inputValue`);
+let enviar = document.getElementById("enviar");
+enviar.addEventListener("click", filtroCat);
+      
+function filtroCat() {
+removeAllChildNodes(cards);
+let modelosFiltrados;
+        
+//si el usuario no ingresa nada en el input se muestran todos los resultados
+if (input.value === "") {
+  modelosFiltrados = productos;
+  } else {
+//filtrar productos con validaciones
+modelosFiltrados = productos.filter(
+  (modelo) => modelo.cat.toLowerCase().includes() === input.value.toLowerCase()
+);
+console.log(modelosFiltrados);
+}
+tarjetasHTML(modelosFiltrados);
+estiloCards();
+}
+
+//Funcion para que no siga agregando cards en el elemento padre en cada busqueda
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+    }
+}
+  
+tarjetasHTML(productos);
+  
+let btnFiltrar = document.getElementById("enviar");
+btnFiltrar.addEventListener("click", filtroCat);
+searchFilters();

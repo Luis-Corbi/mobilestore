@@ -12,6 +12,7 @@ ss* {box-sizing: border-box;
 	body{font-family: 'Hind Siliguri', sans-serif;
 	font-size: 100%;
 	min-height: 100%;
+	overflow-x: hidden;
 	}
 	a{text-decoration: none;
 	}
@@ -36,27 +37,13 @@ ss* {box-sizing: border-box;
 		text-align: center;
 		margin-bottom: none;
 	}
+	.filter{
+		display: none;
+	}
 	.background{ 
 			 width: auto;
 			 height: 500px;
 			 overflow: hidden-unscrollable;
-	}
-	.background2{
-		width: -100px;
-		height: 500px;
-		font-style: normal;
-	}
-	.oferta__contenido, .article{font-style: normal;
-	}
-	.oferta{font-size: 30px;
-		color: black;
-	}
-	.oferta__contenido{
-			 color: black;
-			 text-decoration: none;
-			 text-align: left;
-			 font-size: 2vh;
-			 list-style-type: none;
 	}
 	.modal.fade{color: black;
 	}
@@ -78,23 +65,6 @@ ss* {box-sizing: border-box;
 	}
 	@media only screen and (min-width: 320px){ /* medida celular */
 	.background{background-color: white;}
-	.grid2, .grid3{display: none;}
-	.grid4{
-		width: auto;
-		padding: 10px;
-		border-radius: 4px;
-		text-align: center;
-		align-items: end;
-		gap: 50px;
-		margin: auto;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		grid-template-columns: repeat(1, 1fr);
-		grid-auto-rows: repeat(1,50px);
-		color: white;}
-	.navbar-fixed-top{
-		display: block;
-		border: 0;}
 	.sidebar{
 		position: fixed;
 		top: 51px;
@@ -105,26 +75,9 @@ ss* {box-sizing: border-box;
 		padding: 20px;
 		overflow-x: hidden;
 		overflow-y: auto;}
-	.navbar.navbar-expand-lg.navbar-black{display: none;}
     }
 	@media only screen and (min-width: 768px) and (max-width: 1366px){ /* medida tablet */
 	.background{background-color: white;}
-	.grid2, .grid3{display: none;}
-	.grid4{
-		display: inline-grid;
-		width: auto;
-		padding: 10px;
-		border-radius: 4px;
-		text-align: center;
-		align-items: end;
-		gap: 50px;
-		margin: auto;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		color: white;}
-	.navbar-fixed-top{
-		display: block;
-		border: 0;}
 	.sidebar{
 		position: fixed;
 		top: 51px;
@@ -135,26 +88,9 @@ ss* {box-sizing: border-box;
 		padding: 20px;
 		overflow-x: hidden;
 		overflow-y: auto;}
-	.navbar.navbar-expand-lg.navbar-black{display: none;}
 	}
 	@media only screen and (min-width: 1024px){ /* medida desktop */
 	.background{background-color: white;}
-	.grid2, .grid3{
-		display: inline-grid;
-		width: auto;
-		padding: 10px;
-		border-radius: 4px;
-		text-align: center;
-		align-items: end;
-		gap: 50px;
-		margin: auto;
-		margin-top: 20px;
-		margin-bottom: 50px;
-		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: repeat(2,50px);
-		color: white;}
-	.grid4{display: none;}
-	.navbar-fixed-top{display: none ;}
 	.navbar.navbar-expand-lg.navbar-black{display: flex;
 		position:sticky;
 		top: 51px;
@@ -164,74 +100,6 @@ ss* {box-sizing: border-box;
 		padding: 20px;
 		overflow-x: hidden;
 		overflow-y: auto;}
-	}
-/* css del formulario de registro */
-    .formulario{text-align: center;}
-	#registration-form{
-		max-width: 800px;
-		margin: 120px auto;
-	}
-	
-	#registration-form .image{
-		float: left;
-		height: 500px;
-		width: 50%;
-		background-position: 25%;
-	}
-	
-	#registration-form .frm{
-		float: right;
-		height: 500px;
-		width: 50%;
-		min-width: 250px;
-		padding: 0 35px 40px auto;
-		background-size: 100% 100%;
-		background-color: white;
-	}
-	
-	#registration-form h1{
-		margin-top: 30px;
-		margin-bottom: 20px;
-	}
-	
-	#registration-form .form-control{
-		width: 90%;
-		padding: 12px 20px;
-		height: auto;
-	}
-	
-	@media screen and (max-width: 700px){
-		#registration-form .image{
-			width: 30%;
-			background-position: 60%;
-		}
-	
-		#registration-form .frm{
-			width: 70%;
-		}
-	
-		#registration-form .form-control{
-			width: 100%;
-		}
-	}
-	
-	@media screen and (max-width: 500px){
-		#registration-form .image{
-			display: none;
-		}
-	
-		#registration-form .frm{
-			width: 100%;
-		}
-	
-		#registration-form h1{
-			text-align: center;
-		}
-	
-		#registration-form .btn{
-			width: 100%;
-			margin-top: 20px;
-		}
 	}
 /* footer */
 	.footer-dark {

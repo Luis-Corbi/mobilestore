@@ -1,15 +1,15 @@
 $family: 'Hind Siliguri', sans-serif;
 $size: 100%;
 $min: 100%;
+$hidden: hidden;
 
 html{height: $min;
 }
 body{font-style: $family;
 font-size: $size;
 min-height: $min;
+overflow-x: $hidden;
 }
-@import "grid";
 @import "header";
 @import "background";
-@import "oferta";
 @import "bootstrap";
