@@ -107,7 +107,8 @@ precio: 999.99
   precio: 1399.99
 }
 ]
-
+const id = (id, searchKey) =>
+typeof value === 'string' && id.includes(searchKey);
 //Selecciono donde voy a imprimir las cards
 const cards = document.getElementById('cards')
 
@@ -307,8 +308,8 @@ if (input.value === "") {
   modelosFiltrados = productos;
   } else {
 //filtrar productos con validaciones
-modelosFiltrados = productos.filter(
-  (modelo) => modelo.cat.toLowerCase().includes() === input.value.toLowerCase()
+modelosFiltrados = productos.filter( 
+  (modelo) => modelo.marca.toLowerCase() === input.value.toLowerCase()
 );
 console.log(modelosFiltrados);
 }

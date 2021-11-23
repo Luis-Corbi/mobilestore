@@ -37,9 +37,6 @@ ss* {box-sizing: border-box;
 		text-align: center;
 		margin-bottom: none;
 	}
-	.filter{
-		display: none;
-	}
 	.background{ 
 			 width: auto;
 			 height: 500px;
