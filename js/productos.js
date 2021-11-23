@@ -1,4 +1,3 @@
-import searchFilters from "./filtro_busqueda";
 let productos = [{
   id: 1,
   marca: "Apple",
@@ -328,4 +327,3 @@ tarjetasHTML(productos);
   
 let btnFiltrar = document.getElementById("enviar");
 btnFiltrar.addEventListener("click", filtroCat);
-searchFilters();
